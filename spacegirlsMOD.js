@@ -7,7 +7,8 @@ const rl = require("readline").createInterface({
 
 const prompt = require('prompt-sync')()
 
-let missoes = []
+let missoes = [] 
+
 
 // let missao = {
 //   Nome: nome,
@@ -41,19 +42,13 @@ function exibirMenu() {
         filtrarPrioridade();
         break;
       case 6:
-        const params = ranking.contagemDestinos(missoes)
-        console.log(missoes)
-       // console.clear();
-       ranking.rankingDestinos(teste){
-        teste = params
-       }
+       ranking.rankingDestinos(missoes, exibirMenu)
+
        break;
       case 7:
         listarPorTripulantes();
-        break;z
-      case 0:
+        break;      case 0:
         process.exit();
-        break;
       default:
         console.log("Insira uma opção válida!\n");
         exibirMenu();
@@ -126,4 +121,8 @@ function adicionarTripulante(nome, destino, prioridade, tripulantesAtuais) {
 
 }
 
-module.exports = exibirMenu
+module.exports = {
+  exibirMenu,
+  missoes
+
+}
