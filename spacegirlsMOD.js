@@ -1,54 +1,40 @@
-const { clear } = require("console");
-const rl = require("readline").createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+import PromptSync from "prompt-sync";
+import { listarMissoes } from "./listar.js";
+const prompt = PromptSync();
 
-const prompt = require('prompt-sync')()
+export function exibirMenu() {
+  let opcaoMenu = prompt("=========MENU=========\n1-Adicionar missão\n2-Listar missões\n3-Editar missao\n4-Marcar como concluída\n5-Filtrar por prioridades\n6-Ranking de destinos\n7-Listar por tripulantes\n0-Sair do programa\nInsira a opção desejada.");
+  opcaoMenu = parseInt(opcaoMenu, 10);
 
-let missoes = [];
-// let missao = {
-//   Nome: nome,
-//   Destino: destino,
-//   Prioridade: prioridade,
-//   tripulante : [],
-// };
-function exibirMenu() {
-  console.log(
-    "=========MENU=========\n1-Adicionar missão\n2-Listar missões\n3-Editar missao\n4-Marcar como concluída\n5-Filtrar por prioridades\n6-Ranking de destinos\n7-Listar por tripulantes\n0-Sair do programa"
-  );
-  rl.question("Insira a opção desejada.\n", (opcaoMenu) => {
-    opcaoMenu = parseInt(opcaoMenu, 10);
-    switch (opcaoMenu) {
-      case 1:
-        adicionarMissao();
-        break;
-      case 2:
-        listarMissoes();
-        break;
-      case 3:
-        editarMissao();
-        break;
-      case 4:
-        marcarConcluido();
-        break;
-      case 5:
-        filtrarPrioridade();
-        break;
-      case 6:
-        console.clear();
-        rankingDestinos();
-        break;
-      case 7:
-        listarPorTripulantes();
-        break;
-      case 0:
-        process.exit();
-        break;
-      default:
-        console.log("Insira uma opção válida!\n");
-        exibirMenu();
-    }
-  });
+  switch (opcaoMenu) {
+    case 1:
+      adicionarMissao();
+      break;
+    case 2:
+      listarMissoes();
+      break;
+    case 3:
+      editarMissao();
+      break;
+    case 4:
+      marcarConcluido();
+      break;
+    case 5:
+      filtrarPrioridade();
+      break;
+    case 6:
+      rankingDestinos();
+      break;
+    case 7:
+      listarPorTripulantes();
+      break;
+    case 0:
+      process.exit();
+      break;
+    default:
+      console.log("Insira uma opção válida!\n");
+      exibirMenu();
+  }
 }
-exibirMenu()
+
+exibirMenu();
