@@ -1,3 +1,5 @@
+const menu = ('./spacegirlsMOD')
+
 function contagemDestinos(missoes){
     const contagem = missoes.reduce((acumulador, missao) => {
         let Destino = missao.Destino
