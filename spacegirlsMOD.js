@@ -1,3 +1,4 @@
+const ranking = require('./ranking')
 const { clear } = require("console");
 const rl = require("readline").createInterface({
   input: process.stdin,
@@ -37,7 +38,7 @@ function exibirMenu() {
         break;
       case 6:
         console.clear();
-        rankingDestinos();
+        ranking.rankingDestinos();
         break;
       case 7:
         listarPorTripulantes();
