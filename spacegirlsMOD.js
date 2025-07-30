@@ -13,7 +13,7 @@ let missoes = [];
 //   Prioridade: prioridade,
 //   tripulante : [],
 // };
-function exibirMenu() {
+export function exibirMenu() {
   console.log(
     "=========MENU=========\n1-Adicionar missão\n2-Listar missões\n3-Editar missao\n4-Marcar como concluída\n5-Filtrar por prioridades\n6-Ranking de destinos\n7-Listar por tripulantes\n0-Sair do programa"
   );
@@ -51,4 +51,3 @@ function exibirMenu() {
     }
   });
 }
-exibirMenu()
