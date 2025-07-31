@@ -2,6 +2,7 @@ import PromptSync from "prompt-sync";
 import { listarMissoes } from "./listar.js";
 import { adicionarMissao } from "./adicionarMissao.js"
 import { filtrarPrioridade } from "./filtrarPrioridade.js"
+import { listarPorTripulantes } from "./listarPorTripulantes.js";
 const prompt = PromptSync();
 
 export let missoes = []
