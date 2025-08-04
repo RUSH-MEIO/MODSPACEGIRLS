@@ -1,6 +1,6 @@
-import { exibirMenu, prompt } from "./spacegirlsMOD.js";
+import { exibirMenu, prompt } from "../spacegirlsMOD.js";
 
-import { missoes } from "./spacegirlsMOD.js";
+import { missoes } from "../spacegirlsMOD.js";
 
 export function filtrarPrioridade() {
   console.clear();

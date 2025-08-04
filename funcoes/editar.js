@@ -1,4 +1,4 @@
-import { exibirMenu, missoes, prompt } from "./spacegirlsMOD.js";
+import { exibirMenu, missoes, prompt } from "../spacegirlsMOD.js";
 
 export function editarMissao() {
   console.clear();

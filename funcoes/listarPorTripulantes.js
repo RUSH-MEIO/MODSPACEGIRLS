@@ -1,6 +1,6 @@
-import { exibirMenu } from "./spacegirlsMOD.js";
+import { exibirMenu } from "../spacegirlsMOD.js";
 
-import { missoes, prompt } from "./spacegirlsMOD.js";
+import { missoes, prompt } from "../spacegirlsMOD.js";
 
 function ListarTripulantes() {
   console.log("Nome de todos os Tripulantes Totais das Missoes: ");
