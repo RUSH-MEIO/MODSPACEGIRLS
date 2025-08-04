@@ -3,6 +3,7 @@ import { listarMissoes } from "./listar.js";
 import { adicionarMissao } from "./adicionarMissao.js";
 import { filtrarPrioridade } from "./filtrarPrioridade.js";
 import { listarPorTripulantes } from "./listarPorTripulantes.js";
+import { rankingDestinos } from "./rankingDestinos.js"
 export const prompt = PromptSync({ sigint: true });
 
 export let missoes = [];
