@@ -1,8 +1,11 @@
 import PromptSync from "prompt-sync";
-import { listarMissoes } from "./listar.js";
-import { adicionarMissao } from "./adicionarMissao.js";
-import { filtrarPrioridade } from "./filtrarPrioridade.js";
-import { listarPorTripulantes } from "./listarPorTripulantes.js";
+import { listarMissoes } from "./funcoes/listar.js";
+import { adicionarMissao } from "./funcoes/adicionarMissao.js";
+import { filtrarPrioridade } from "./funcoes/filtrarPrioridade.js";
+import { listarPorTripulantes } from "./funcoes/listarPorTripulantes.js";
+import { editarMissao } from "./funcoes/editar.js";
+import { marcarConcluido } from "./funcoes/marcarConcluido.js";
+import { rankingDestinos } from "./funcoes/rankingDestinos.js";
 export const prompt = PromptSync({ sigint: true });
 
 export let missoes = [];

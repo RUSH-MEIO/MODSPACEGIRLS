@@ -1,6 +1,4 @@
-import { exibirMenu } from "../spacegirlsMOD.js";
-
-import { missoes, prompt } from "../spacegirlsMOD.js";
+import { exibirMenu, missoes, prompt } from "../spacegirlsMOD.js";
 
 function ListarTripulantes() {
   console.log("Nome de todos os Tripulantes Totais das Missoes: ");
@@ -38,10 +36,11 @@ export function listarPorTripulantes() {
           missao.Destino
         } | Tripulantes: ${missao.tripulantes.join(", ")} | Status: ${status}\n`
       );
+      exibirMenu()
     });
   } else {
     console.log(`Nenhuma missão encontrada para o tripulante "${filtro}".`);
+    exibirMenu()
   }
-  prompt("Pressione Enter para voltar ao menu...");
-  return;
+  exibirMenu()
 }

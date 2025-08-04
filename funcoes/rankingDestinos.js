@@ -1,6 +1,4 @@
-import { exibirMenu } from "./spacegirlsMOD.js";
-
-import { missoes, prompt } from "./spacegirlsMOD.js";
+import { exibirMenu, missoes, prompt } from "../spacegirlsMOD.js";
 
 function contagemDestinos(missoes) {
   const contagem = missoes.reduce((acumulador, missao) => {
