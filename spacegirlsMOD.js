@@ -1,16 +1,21 @@
 import PromptSync from "prompt-sync";
 import { listarMissoes } from "./listar.js";
-import { adicionarMissao } from "./adicionarMissao.js"
-const prompt = PromptSync();
+import { adicionarMissao } from "./adicionarMissao.js";
+import { filtrarPrioridade } from "./filtrarPrioridade.js";
+import { listarPorTripulantes } from "./listarPorTripulantes.js";
+export const prompt = PromptSync({ sigint: true });
 
-export let missoes = []
+export let missoes = [];
 
 export function exibirMenu() {
-  let opcaoMenu = prompt("=========MENU=========\n1-Adicionar missão\n2-Listar missões\n3-Editar missao\n4-Marcar como concluída\n5-Filtrar por prioridades\n6-Ranking de destinos\n7-Listar por tripulantes\n0-Sair do programa\nInsira a opção desejada.");
+  console.log(
+    "=========MENU=========\n1-Adicionar missão\n2-Listar missões\n3-Editar missao\n4-Marcar como concluída\n5-Filtrar por prioridades\n6-Ranking de destinos\n7-Listar por tripulantes\n0-Sair do programa\nInsira a opção desejada."
+  );
+  let opcaoMenu = prompt("> ");
   opcaoMenu = parseInt(opcaoMenu, 10);
-
   switch (opcaoMenu) {
     case 1:
+      console.clear();
       adicionarMissao();
       break;
     case 2:
@@ -32,6 +37,7 @@ export function exibirMenu() {
       listarPorTripulantes();
       break;
     case 0:
+      console.log("Saindo do programa!");
       process.exit();
       break;
     default:
